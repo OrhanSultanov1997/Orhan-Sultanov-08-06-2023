@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .App {
+    font-size: 14px;
+
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  article {
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .App {
+    font-size: 18px;
+    
+
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  article {
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+
+  header {
+    padding: 30px;
+  }
+
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 30px;
+  }
+
+  article {
+    padding: 30px;
+  }
+}
