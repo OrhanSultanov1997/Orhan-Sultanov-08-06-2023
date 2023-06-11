@@ -58,7 +58,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage searchMovie={searchMovie} movie={movie} addAndRemove={addAndRemove} flag={flag} setFlag={setFlag} />} />
           <Route path='/favorites' element={favorite.map((val, index) => {
-            return <Favorites val={val} setMovie={setMovie} />
+            return <Favorites val={val} setMovie={setMovie} setFlag={setFlag} />
           })} />
         </Routes>
       </HashRouter>

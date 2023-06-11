@@ -13,7 +13,7 @@ export default function HomePage(props) {
         }
         for (let i = 0; i < movieName.length; i++) {
             if (movieName.charAt(i) < 'A' || movieName.charAt(i) > 'Z' && movieName.charAt(i) < 'a' || movieName.charAt(i) > 'z') {
-                document.getElementById('name').value = ''
+            
                 alert('english charts only')
                 return false
             }
@@ -26,7 +26,7 @@ export default function HomePage(props) {
         if (props.flag) {
             return <div>
                 <h3>Movie title : '{props.movie.Title}'</h3> 
-                <h3>Release year : '{props.movie.Released}''  </h3>
+                <h3>Release year : '{props.movie.Year}'  </h3>
                 <img style={{width : '200px',height : '200px'}} src={props.movie.Poster} />
                 <br />
                 <button onClick={() => { props.addAndRemove(props.movie) }}  >Add/Remove </button>
@@ -35,7 +35,7 @@ export default function HomePage(props) {
     }
     return (
         <div>
-            <input placeholder='enter movie name' type="text" onChange={(e) => { setMovieName(e.target.value) }} />
+            <input id='name' placeholder='enter movie name' type="text" onChange={(e) => { setMovieName(e.target.value) }} />
             <button onClick={checkName}  >Search</button>
             {show()}
         </div>
